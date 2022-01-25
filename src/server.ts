@@ -17,7 +17,7 @@ server.use(express.static(path.join(__dirname, '../public'))); //criando pasta p
 // Rotas
 server.use(mainRoutes); //importando as rotas do arquivo index.js
 server.use((req, res) => {
-    res.send('Página não encontrada!'); //Rota 404
+    res.render('pages/404'); //Rota 404
 });
 
 server.listen(process.env.PORT); //colocando o servidor pra rodar na porta que eu defini no arquivo .env
